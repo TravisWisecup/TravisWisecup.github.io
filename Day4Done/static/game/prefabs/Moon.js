@@ -1,0 +1,37 @@
+export default {
+  name: "Moon",
+  components:[
+    {
+      type:"CircleComponent",
+      values:[
+        {
+          key:"radius",
+          value:"10"
+        },
+        {
+          key:"fill",
+          value:"white"
+        },
+        {
+          key:"stroke",
+          value:"black"
+        },
+      ]
+    },
+    {
+      type:"CircleCollider",
+      values:[
+        {
+          key:"radius",
+          value:"10"
+        }
+      ]
+    },
+    {
+      type:"OrbitBehavior",
+    },
+    {
+      type:"CollisionCircleBehavior",
+    },
+  ]
+}
