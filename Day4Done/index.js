@@ -43,17 +43,17 @@ io.on('connection', function(socket) {
   });
   socket.on('movement', function(data) {
     var player = players[socket.id] || {};
-    if (data.left) {
-      player.x -= 5;
+    if (data.x < 0) {
+      player.Obj.x -= 5;
     }
-    if (data.up) {
-      player.y -= 5;
+    if (data.y < 0) {
+      player.Obj.y -= 5;
     }
-    if (data.right) {
-      player.x += 5;
+    if (data.x > 0) {
+      player.Obj.x += 5;
     }
-    if (data.down) {
-      player.y += 5;
+    if (data.y > 0 ) {
+      player.Obj.y += 5;
     }
   });
 });
