@@ -5,8 +5,6 @@ import GameBehaviors from "../game/GameBehaviors.js";
 import GameObjects from "../game/GameObjects.js"
 import Guy from "./game/prefabs/Guy.js";
 
-
-
 Engine.Base.Scene.gameObjects = GameObjects;
 Engine.Base.Scene.components = Engine.Components;
 Engine.Base.Scene.gameBehaviors = GameBehaviors;
@@ -81,6 +79,10 @@ function wheel(event){
     console.log(data);
   });
   
+  socket.on('test', function() {
+    SceneManager.currentScene.instantiate(Guy, [100, 200]);
+  });
+
   // var movement = {
   //     up: false,
   //     down: false,
@@ -145,8 +147,6 @@ window.onresize = resizeCanvas;
 // So we fire it manually...
 resizeCanvas();
 
-
-
 let canv, ctx;
 
 function main() {
@@ -170,21 +170,25 @@ function draw(ctx) {
   SceneManager.currentScene.draw(ctx, canv.width, canv.height);
 }
 
-socket.on('state', function(players) {
-  var count = 0;
-  for (var id in players) {
-    count++;
-    var player = players[id];
-    if(SceneManager.currentScene.name == "StartScene")
-    {
-      player.Obj = SceneManager.instantiate(Guy, [player.x + count * 5, player.y]);
-      for(var i = 0; i < 5; i++)
-      {
-        player.Obj.x += 5;
-      }
-    }
+// socket.on('state', function(players) {
+//   var count = 0;
+//   for (var id in players) {
+//     count++;
+//     var player = players[id];
+//     if(SceneManager.currentScene.name == "StartScene")
+//     {
+//       player.Obj = SceneManager.instantiate(Guy, [player.x + count * 5, player.y]);
+//       for(var i = 0; i < 5; i++)
+//       {
+//         player.Obj.x += 5;
+//       }
+//     }
 
-  }
-});
+//   }
+// });
+
+// socket.on('test', function(myObject){
+//   console.log("Test success! myObject x = " + myObject.x + " and myObject y = " + myObject.y);
+// });
 
 main();

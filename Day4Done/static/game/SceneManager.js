@@ -52,5 +52,7 @@ export default class SceneManager {
     return this.currentScene.instantiate(gameObjectType, location, rotation, this.currentScene.children, scaleX, scaleY);
   }
 
-
+  static instatiateWithColor(gameObjectType, color, location, rotation, scaleX, scaleY) {
+    return this.currentScene.instantiate(gameObjectType, color, location, rotation, this.currentScene.children, scaleX, scaleY);
+  }
 }

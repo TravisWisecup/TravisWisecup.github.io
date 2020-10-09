@@ -144,19 +144,16 @@ export default {
             }
           ]
       },
-      {
-        name:"Cards",
-        location:{x:50,y:50},
-        type:'CardBack',
-        components: [
-          {
-              type:"ClickBehavior",
-          },
-          {
-            type:"SocketBehavior"
-          }
-      ]
-      },
+      // {
+      //   name:"Cards",
+      //   location:{x:50,y:50},
+      //   type:'CardBack',
+      //   components: [
+      //     {
+      //         type:"ClickBehavior",
+      //     },
+      // ]
+      // },
       // {
       //   name:"trackerBar",
       //   location: {x:260, y:50},
