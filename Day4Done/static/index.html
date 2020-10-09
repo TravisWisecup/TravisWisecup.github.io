@@ -16,7 +16,8 @@
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src='https://unpkg.com/vue'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
-  
+    <script src="engine/Engine.js" type="module"></script>
+    <script src="game/SceneManager.js" type="module"></script>
     <script>
   
       var app = new Vue({
@@ -122,7 +123,7 @@
       update(delta);
 
       // Render
-      // drawCanvas();
+      drawCanvas();
       
       // Update the stored timestamp
       lastTimestamp = timestamp
@@ -159,6 +160,8 @@
 
     // Render to the screen
     function drawCanvas() {
+
+      SceneManager.currentScene.instantiate(Guy, [200,200]);
       
       // Grad the 2D context of the canvas
       // var ctx = canvas.getContext("2d");
