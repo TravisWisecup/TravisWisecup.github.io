@@ -18,6 +18,9 @@ import CameraZoom from "./behaviors/CameraZoom.js"
 import MouseText from "./behaviors/MouseText.js"
 import MatrixReturn from "./behaviors/MatrixReturn.js"
 import StartSceneInputListener from "./behaviors/StartSceneInputListener.js"
+import NetworkBehavior from "./behaviors/NetworkBehavior.js"
+import BladeCollisionBehavior from "./behaviors/BladeCollisionBehavior.js"
+import WASDMovementBehavior from "./behaviors/WASDMovementBehavior.js"
 
 export default{
   CircleBehavior,
@@ -40,5 +43,8 @@ export default{
   MatrixReturn,
   StartSceneInputListener,
   FewTreeBuilder,
+  NetworkBehavior,
+  BladeCollisionBehavior,
+  WASDMovementBehavior
   
 }

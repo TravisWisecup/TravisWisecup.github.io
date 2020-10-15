@@ -13,6 +13,7 @@ import TriangleComponent from "./components/TriangleComponent.js"
 import CameraComponent from "./components/CameraComponent.js"
 import CanvasComponent from "./components/CanvasComponent.js"
 import RectTransform from "./components/RectTransform.js"
+import AxeBladeColliderComponent from "./components/AxeBladeColliderComponent.js"
 
 export default {
   CircleComponent,
@@ -30,4 +31,5 @@ export default {
   CameraComponent,
   CanvasComponent,
   RectTransform,
+  AxeBladeColliderComponent,
 }

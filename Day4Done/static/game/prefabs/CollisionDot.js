@@ -19,7 +19,7 @@ export default {
         ]
       },
       {
-        type:"MovementBehavior",
+        type:"WASDMovementBehavior",
       },
       {
         type:"DotBehavior",

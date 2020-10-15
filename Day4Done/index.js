@@ -61,14 +61,21 @@ io.on('connection', function (socket) {
 
   //Listen for the user to move
   socket.on('move', msg => {
-    let object = objects.find(i => i.id == socket.id);
-    if (object) {
-      //Update the object
-      object.x = msg.x;
-      object.y = msg.y;
-      //Update the other objects
-      socket.broadcast.emit('update', object);
+    let toSend =  {
+      x:msg.x,
+      y:msg.y,
+      id:socket.id
     }
+    socket.broadcast.emit("update",toSend)
+    // let object = objects.find(i => i.id == socket.id);
+    // if (object) {
+    //   //console.log("move")
+    //   //Update the object
+    //   object.x = msg.x;
+    //   object.y = msg.y;
+    //   //Update the other objects
+    //   socket.broadcast.emit('update', object);
+    // }
   });
 
 

@@ -20,12 +20,15 @@ import CollisionCircle from "./prefabs/CollisionCircle.js"
 import CollisionDot from "./prefabs/CollisionDot.js"
 import Trees from "./prefabs/Trees.js"
 import FewTrees from "./prefabs/FewTrees.js"
+import NetworkListener from "./prefabs/NetworkListener.js"
 import ScreenText from "./prefabs/ScreenText.js"
 import Triangle from "./prefabs/Triangle.js"
 import StartSceneListener from "./prefabs/StartSceneListener.js"
 import Rectangle from "./prefabs/Rectangle.js"
 import StartButton from "./prefabs/StartButton.js"
 import Text from "./prefabs/Text.js"
+import NetworkDummy from "./prefabs/NetworkDummy.js"
+import BladeCollider from "./prefabs/BladeCollider.js"
 
 export default {
   OscillatingCircle,
@@ -50,12 +53,14 @@ export default {
   Canvas,
   ScreenText,
   Trees,
+  NetworkListener,
   Triangle,
   StartSceneListener,
   Rectangle,
   StartButton,
   Text,
   FewTrees,
-  
+  NetworkDummy,
+  BladeCollider
 
 }
